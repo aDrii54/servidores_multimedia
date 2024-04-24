@@ -3,7 +3,7 @@
 function aviso_subidas(){
         while read line
         do
-		api_key="8ae08e11c69497e279f94e747befdbd2"
+		api_key="INTRODUCE VALOR"
                 titulo=$(sed 's/\(.*\)\.\([0-9]\{4\}\)/\1/' subidas.temp| sed 's/\./%20/g')
                 year=$(sed 's/.*\.\([0-9]\{4\}\)/\1/' subidas.temp)
                 portada=$(curl "https://api.themoviedb.org/3/search/movie?api_key=$(api_key)&query=${titulo}&year=${year}&language=es-ES" | jq '.results[].poster_path | "https://image.tmdb.org/t/p/w500" + .')
@@ -14,8 +14,8 @@ function aviso_subidas(){
                 nota=$(curl "https://api.themoviedb.org/3/search/movie?api_key=$(api_key)&query=${titulo}&year=${year}&language=es-ES" | jq '.results[].vote_average')
                 nota_e=$(echo $nota| awk '{ split($0,a," "); print a[1]}')
                 titulo=$(echo $titulo| sed -e 's/%20/ /g')
-                TOKEN="6408734443:AAHRtxZDrKiYZFWvxPpXm1Y97EnKiPnSoGM"
-                CHAT_ID="-1002094716188"
+                TOKEN="INTRODUCE VALOR"
+                CHAT_ID="INTRODUCE VALOR"
                 MESSAGE="✅NUEVA PELICULA SUBIDA
 <b>Nota (TMDB): </b>$nota_e
 <b>Año: </b>$year
@@ -37,7 +37,7 @@ function aviso_subidas(){
 function aviso_borradas(){
 	while read line
         do
-		api_key="8ae08e11c69497e279f94e747befdbd2"
+		api_key="INTRODUCE VALOR"
                 titulo=$(sed 's/\(.*\)\.\([0-9]\{4\}\)/\1/' borradas.temp| sed 's/\./%20/g')
                 year=$(sed 's/.*\.\([0-9]\{4\}\)/\1/' borradas.temp)
                 portada=$(curl "https://api.themoviedb.org/3/search/movie?api_key=$(api_key)&query=${titulo}&year=${year}&language=es-ES" | jq '.results[].poster_path | "https://image.tmdb.org/t/p/w500" + .')
@@ -48,8 +48,8 @@ function aviso_borradas(){
                 nota=$(curl "https://api.themoviedb.org/3/search/movie?api_key=$(api_key)&query=${titulo}&year=${year}&language=es-ES" | jq '.results[].vote_average')
                 nota_e=$(echo $nota| awk '{ split($0,a," "); print a[1]}')
                 titulo=$(echo $titulo| sed -e 's/%20/ /g')
-                TOKEN="6408734443:AAHRtxZDrKiYZFWvxPpXm1Y97EnKiPnSoGM"
-                CHAT_ID="-1002094716188"
+                TOKEN="INTRODUCE VALOR"
+                CHAT_ID="INTRODUCE VALOR"
                 MESSAGE="❌PELICULA ELIMINADA
 <b>Nota (TMDB): </b>$nota_e
 <b>Año: </b>$year
