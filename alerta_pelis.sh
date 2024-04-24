@@ -5,7 +5,6 @@
 ## Alerta si hay pelis nuevas o eliminadas    ##
 ##                                            ##
 ################################################
-set -x
 cd $(dirname $0)
 source ./alerta_pelis_funciones.sh
 
