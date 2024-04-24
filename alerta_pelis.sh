@@ -9,7 +9,7 @@ cd $(dirname $0)
 source ./alerta_pelis_funciones.sh
 
 #Ruta donde guardes tus pelis
-RUTA_PELIS=/media/terramaster/plex/Peliculas
+RUTA_PELIS="INTRODUCE VALOR"
 
 #Siempre tiene que existir un old.temp, si no existe, lo crea.
 #En este old.temp guadaremos la lista de pelis con formato "Titulo", sin año y sustituiremos los espacios por "."
