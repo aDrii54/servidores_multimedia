@@ -9,8 +9,8 @@ while IFS= read -r archivo
 do
     fecha_modificacion=$(stat -c "%y" "${RUTA_PELIS}${archivo}"| cut -d' ' -f1)
     fecha_actual=$(date +'%Y-%m-%d')
-    timestamp1=$(date -d "$fecha_actual" +%s)
-    timestamp2=$(date -d "$fecha_modificacion" +%s)
+    timestamp1_segundos=$(date -d "$fecha_actual" +%s)
+    timestamp2_segundos=$(date -d "$fecha_modificacion" +%s)
     diferencia_segundos=$((timestamp1 - timestamp2))
     diferencia_dias=$((diferencia_segundos / (60*60*24)))
     if [[ $diferencia_dias -ge $DIAS ]]
