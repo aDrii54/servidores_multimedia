@@ -34,7 +34,7 @@ do
 			;;
 		
 			3)
-				echo -e "\nNo se ha eliminado ${RUTA_PELIS}'$archivo'"
+				echo -e "\nSe ha omitido cualquier acción sobre ${RUTA_PELIS}'$archivo'"
 			;;
 
 			4)
