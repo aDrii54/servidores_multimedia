@@ -1,7 +1,7 @@
 #!/bin/bash
 
-RUTA_PELIS="/media/terramaster/plex/Peliculas/" 
-DIAS=90
+RUTA_PELIS="INTRODUCE VALOR" 
+DIAS="INTRODUCE VALOR"
 
 ls -tr $RUTA_PELIS | grep -v 'pelis.lista' > pelis.lista
 
